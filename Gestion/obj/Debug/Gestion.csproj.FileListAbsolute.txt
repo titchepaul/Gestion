@@ -1,0 +1,16 @@
+C:\Users\pault\source\repos\Gestion\Gestion\bin\Debug\Gestion.exe.config
+C:\Users\pault\source\repos\Gestion\Gestion\bin\Debug\Gestion.exe
+C:\Users\pault\source\repos\Gestion\Gestion\bin\Debug\Gestion.pdb
+C:\Users\pault\source\repos\Gestion\Gestion\obj\Debug\Gestion.Clients.resources
+C:\Users\pault\source\repos\Gestion\Gestion\obj\Debug\Gestion.Form1.resources
+C:\Users\pault\source\repos\Gestion\Gestion\obj\Debug\Gestion.Form2.resources
+C:\Users\pault\source\repos\Gestion\Gestion\obj\Debug\Gestion.ListeVentes.resources
+C:\Users\pault\source\repos\Gestion\Gestion\obj\Debug\Gestion.Modification.resources
+C:\Users\pault\source\repos\Gestion\Gestion\obj\Debug\Gestion.Produit.resources
+C:\Users\pault\source\repos\Gestion\Gestion\obj\Debug\Gestion.Properties.Resources.resources
+C:\Users\pault\source\repos\Gestion\Gestion\obj\Debug\Gestion.Ventes.resources
+C:\Users\pault\source\repos\Gestion\Gestion\obj\Debug\Gestion.csproj.GenerateResource.cache
+C:\Users\pault\source\repos\Gestion\Gestion\obj\Debug\Gestion.csproj.CoreCompileInputs.cache
+C:\Users\pault\source\repos\Gestion\Gestion\obj\Debug\Gestion.exe
+C:\Users\pault\source\repos\Gestion\Gestion\obj\Debug\Gestion.pdb
+C:\Users\pault\source\repos\Gestion\Gestion\obj\Debug\Gestion.csprojAssemblyReference.cache
