@@ -34,6 +34,8 @@
             this.tbPhoneNumber = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btSave = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dtPicker = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // label1
@@ -81,18 +83,38 @@
             // 
             // btSave
             // 
-            this.btSave.Location = new System.Drawing.Point(328, 284);
+            this.btSave.Location = new System.Drawing.Point(328, 319);
             this.btSave.Name = "btSave";
             this.btSave.Size = new System.Drawing.Size(110, 39);
             this.btSave.TabIndex = 5;
             this.btSave.Text = "Enrégistrer";
             this.btSave.UseVisualStyleBackColor = true;
+            this.btSave.Click += new System.EventHandler(this.btSave_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(203, 243);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(46, 17);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Date :";
+            // 
+            // dtPicker
+            // 
+            this.dtPicker.Location = new System.Drawing.Point(328, 243);
+            this.dtPicker.Name = "dtPicker";
+            this.dtPicker.Size = new System.Drawing.Size(230, 22);
+            this.dtPicker.TabIndex = 7;
             // 
             // Clients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Gestion.Properties.Resources.aloe_vera;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dtPicker);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.btSave);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.tbPhoneNumber);
@@ -115,5 +137,7 @@
         private System.Windows.Forms.TextBox tbPhoneNumber;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btSave;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DateTimePicker dtPicker;
     }
 }
