@@ -14,3 +14,4 @@ C:\Users\pault\source\repos\Gestion\Gestion\obj\Debug\Gestion.csproj.CoreCompile
 C:\Users\pault\source\repos\Gestion\Gestion\obj\Debug\Gestion.exe
 C:\Users\pault\source\repos\Gestion\Gestion\obj\Debug\Gestion.pdb
 C:\Users\pault\source\repos\Gestion\Gestion\obj\Debug\Gestion.csprojAssemblyReference.cache
+C:\Users\pault\source\repos\Gestion\Gestion\obj\Debug\Gestion.DisplayCustomer.resources

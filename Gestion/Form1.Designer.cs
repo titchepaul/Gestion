@@ -38,6 +38,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btVentes = new System.Windows.Forms.Button();
             this.btClients = new System.Windows.Forms.Button();
+            this.btListeClient = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -120,11 +121,21 @@
             // 
             this.btClients.Location = new System.Drawing.Point(467, 24);
             this.btClients.Name = "btClients";
-            this.btClients.Size = new System.Drawing.Size(109, 46);
+            this.btClients.Size = new System.Drawing.Size(151, 46);
             this.btClients.TabIndex = 4;
-            this.btClients.Text = "Clients";
+            this.btClients.Text = "ENCODAGE DES CLIENTS";
             this.btClients.UseVisualStyleBackColor = true;
             this.btClients.Click += new System.EventHandler(this.btClients_Click);
+            // 
+            // btListeClient
+            // 
+            this.btListeClient.Location = new System.Drawing.Point(660, 25);
+            this.btListeClient.Name = "btListeClient";
+            this.btListeClient.Size = new System.Drawing.Size(124, 45);
+            this.btListeClient.TabIndex = 5;
+            this.btListeClient.Text = "LISTE DES CLIENTS";
+            this.btListeClient.UseVisualStyleBackColor = true;
+            this.btListeClient.Click += new System.EventHandler(this.btListeClient_Click);
             // 
             // Form1
             // 
@@ -133,6 +144,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1038, 529);
+            this.Controls.Add(this.btListeClient);
             this.Controls.Add(this.btClients);
             this.Controls.Add(this.btVentes);
             this.Controls.Add(this.label1);
@@ -158,6 +170,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btVentes;
         private System.Windows.Forms.Button btClients;
+        private System.Windows.Forms.Button btListeClient;
     }
 }
 

@@ -178,5 +178,11 @@ namespace Gestion
             Clients clients = new Clients();
             clients.ShowDialog();
         }
+
+        private void btListeClient_Click(object sender, EventArgs e)
+        {
+            DisplayCustomer displayCustomer = new DisplayCustomer();
+            displayCustomer.ShowDialog();
+        }
     }
 }
