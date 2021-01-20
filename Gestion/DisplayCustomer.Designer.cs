@@ -30,10 +30,10 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.cbClient = new System.Windows.Forms.CheckBox();
-            this.cBoxClient = new System.Windows.Forms.ComboBox();
             this.btDelete = new System.Windows.Forms.Button();
+            this.cBoxClient = new System.Windows.Forms.ComboBox();
+            this.cbClient = new System.Windows.Forms.CheckBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -59,16 +59,23 @@
             this.panel1.Size = new System.Drawing.Size(734, 301);
             this.panel1.TabIndex = 1;
             // 
-            // dataGridView1
+            // btDelete
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.GridColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.Location = new System.Drawing.Point(45, 40);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(464, 231);
-            this.dataGridView1.TabIndex = 0;
+            this.btDelete.Location = new System.Drawing.Point(566, 211);
+            this.btDelete.Name = "btDelete";
+            this.btDelete.Size = new System.Drawing.Size(93, 38);
+            this.btDelete.TabIndex = 3;
+            this.btDelete.Text = "Supprimer";
+            this.btDelete.UseVisualStyleBackColor = true;
+            this.btDelete.Click += new System.EventHandler(this.btDelete_Click);
+            // 
+            // cBoxClient
+            // 
+            this.cBoxClient.FormattingEnabled = true;
+            this.cBoxClient.Location = new System.Drawing.Point(554, 105);
+            this.cBoxClient.Name = "cBoxClient";
+            this.cBoxClient.Size = new System.Drawing.Size(121, 24);
+            this.cBoxClient.TabIndex = 2;
             // 
             // cbClient
             // 
@@ -81,22 +88,16 @@
             this.cbClient.UseVisualStyleBackColor = true;
             this.cbClient.CheckedChanged += new System.EventHandler(this.cbClient_CheckedChanged);
             // 
-            // cBoxClient
+            // dataGridView1
             // 
-            this.cBoxClient.FormattingEnabled = true;
-            this.cBoxClient.Location = new System.Drawing.Point(554, 105);
-            this.cBoxClient.Name = "cBoxClient";
-            this.cBoxClient.Size = new System.Drawing.Size(121, 24);
-            this.cBoxClient.TabIndex = 2;
-            // 
-            // btDelete
-            // 
-            this.btDelete.Location = new System.Drawing.Point(566, 211);
-            this.btDelete.Name = "btDelete";
-            this.btDelete.Size = new System.Drawing.Size(93, 38);
-            this.btDelete.TabIndex = 3;
-            this.btDelete.Text = "Supprimer";
-            this.btDelete.UseVisualStyleBackColor = true;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridView1.Location = new System.Drawing.Point(45, 40);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(464, 231);
+            this.dataGridView1.TabIndex = 0;
             // 
             // DisplayCustomer
             // 

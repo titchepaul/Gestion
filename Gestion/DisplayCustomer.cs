@@ -13,15 +13,25 @@ namespace Gestion
 {
     public partial class DisplayCustomer : Form
     {
+        List<String> list = null;
+     
         public DisplayCustomer()
         {
             InitializeComponent();
+            Connection_Deconnection.connect();
             displayGrid();
         }
 
         private void DisplayCustomer_Load(object sender, EventArgs e)
         {
+            this.btDelete.Visible = false;
+            this.cBoxClient.Visible = false;
+            remplirList();
 
+            foreach(string str in list)
+            {
+                cBoxClient.Items.Add(str);
+            }
         }
         public void displayGrid()
         {
@@ -104,10 +114,83 @@ namespace Gestion
             dataGridView1.Update();
             dataGridView1.Refresh();
         }
+        private void remplirList()
+        {
+            try
+            {
+                list = new List<string>();
+                //requête sql
+                String query = "SELECT nomClients" +
+                    " FROM Clients";
+
+                // lire l'enrégistrement
+                OleDbCommand sql = new OleDbCommand();
+                sql.CommandText = query;
+                sql.Connection = Connection_Deconnection.connection;
+                sql.CommandType = System.Data.CommandType.Text;
+
+                //le reader curseur
+                OleDbDataReader reader = sql.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    list.Add((String)reader[0]);
+                }
+                reader.Close();
+                //Connection_Deconnection.deconnect();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Erreur lors de la récupération des données " + e.Message);
+                Connection_Deconnection.deconnect();
+            }
+        }
+        private void deleteClient(string nomClient)
+        {
+            try
+            {
+                String query = String.Format("DELETE * FROM Clients WHERE nomClients = "+"'"+nomClient+"'");
+                //MessageBox.Show(query);
+                OleDbCommand sql = new OleDbCommand(query, Connection_Deconnection.connection);
+                int rows = sql.ExecuteNonQuery();
+                if (rows == 1)
+                {
+                    MessageBox.Show("Client supprimé avec succès ");
+                }
+                else
+                {
+                    MessageBox.Show("Erreur lors de la suppression ");
+                }
+
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
+        }
 
         private void cbClient_CheckedChanged(object sender, EventArgs e)
         {
+            if(cbClient.Checked == false)
+            {
+                btDelete.Visible = false;
+                cBoxClient.Visible = false;
+            }
+            else
+            {
+                btDelete.Visible = true;
+                cBoxClient.Visible = true;
+            }
+        }
 
+        private void btDelete_Click(object sender, EventArgs e)
+        {
+            string getValue = cBoxClient.Text;
+            if (! getValue.Equals(""))
+            {
+                deleteClient(getValue);
+                displayGrid();
+            }
         }
     }
 }
