@@ -184,5 +184,11 @@ namespace Gestion
             DisplayCustomer displayCustomer = new DisplayCustomer();
             displayCustomer.ShowDialog();
         }
+
+        private void btCasse_Click(object sender, EventArgs e)
+        {
+            Casse casse = new Casse();
+            casse.ShowDialog();
+        }
     }
 }

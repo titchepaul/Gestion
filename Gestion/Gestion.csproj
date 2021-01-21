@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Casse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Casse.Designer.cs">
+      <DependentUpon>Casse.cs</DependentUpon>
+    </Compile>
     <Compile Include="Clients.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +108,9 @@
     <Compile Include="Ventes.Designer.cs">
       <DependentUpon>Ventes.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Casse.resx">
+      <DependentUpon>Casse.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Clients.resx">
       <DependentUpon>Clients.cs</DependentUpon>
     </EmbeddedResource>

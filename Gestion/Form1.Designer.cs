@@ -39,6 +39,7 @@
             this.btVentes = new System.Windows.Forms.Button();
             this.btClients = new System.Windows.Forms.Button();
             this.btListeClient = new System.Windows.Forms.Button();
+            this.btCasse = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -137,6 +138,16 @@
             this.btListeClient.UseVisualStyleBackColor = true;
             this.btListeClient.Click += new System.EventHandler(this.btListeClient_Click);
             // 
+            // btCasse
+            // 
+            this.btCasse.Location = new System.Drawing.Point(863, 25);
+            this.btCasse.Name = "btCasse";
+            this.btCasse.Size = new System.Drawing.Size(122, 45);
+            this.btCasse.TabIndex = 6;
+            this.btCasse.Text = "CASSE(S)";
+            this.btCasse.UseVisualStyleBackColor = true;
+            this.btCasse.Click += new System.EventHandler(this.btCasse_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -144,6 +155,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1038, 529);
+            this.Controls.Add(this.btCasse);
             this.Controls.Add(this.btListeClient);
             this.Controls.Add(this.btClients);
             this.Controls.Add(this.btVentes);
@@ -171,6 +183,7 @@
         private System.Windows.Forms.Button btVentes;
         private System.Windows.Forms.Button btClients;
         private System.Windows.Forms.Button btListeClient;
+        private System.Windows.Forms.Button btCasse;
     }
 }
 
