@@ -57,7 +57,7 @@
             // 
             // btAffichageVentes
             // 
-            this.btAffichageVentes.Location = new System.Drawing.Point(696, 207);
+            this.btAffichageVentes.Location = new System.Drawing.Point(696, 112);
             this.btAffichageVentes.Name = "btAffichageVentes";
             this.btAffichageVentes.Size = new System.Drawing.Size(133, 60);
             this.btAffichageVentes.TabIndex = 2;
@@ -68,7 +68,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Gainsboro;
-            this.button1.Location = new System.Drawing.Point(696, 78);
+            this.button1.Location = new System.Drawing.Point(696, 24);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(133, 57);
             this.button1.TabIndex = 1;

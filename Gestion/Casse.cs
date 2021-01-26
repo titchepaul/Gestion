@@ -14,6 +14,7 @@ namespace Gestion
     public partial class Casse : Form
     {
         List<String> list = null;
+        List<String> listOfCasse = null;
         public Casse()
         {
             InitializeComponent();
@@ -22,10 +23,20 @@ namespace Gestion
 
         private void Casse_Load(object sender, EventArgs e)
         {
+            cbCasse.Visible = false;
+            btSupprimer.Visible = false;
+
             remplirList();
-            foreach(string str in list)
+            remplirListOfCasse();
+            //pour l'ajout
+            foreach (string str in list)
             {
                 cbNomProduit.Items.Add(str);
+            }
+            //pour la suppression
+            foreach(string casses in listOfCasse)
+            {
+                cbCasse.Items.Add(casses);
             }
         }
         public void insertValue(string nomProduits, string date, double productPrice, int nbCasse)
@@ -45,7 +56,7 @@ namespace Gestion
                 sql.Parameters.AddWithValue("@valuestr", productsName);
                 sql.Parameters.AddWithValue("@valuestr1", dayOfDate);
                 sql.Parameters.AddWithValue("@valuestr2", prixProduit);
-                sql.Parameters.AddWithValue("@valuestr3",casse);
+                sql.Parameters.AddWithValue("@valuestr3", casse);
 
                 int rows = sql.ExecuteNonQuery();
                 if (rows == 1)
@@ -64,6 +75,9 @@ namespace Gestion
                 MessageBox.Show(err.Message);
             }
         }
+        /*
+         * pour le produit
+         * */
         private void remplirList()
         {
             try
@@ -85,6 +99,37 @@ namespace Gestion
                 while (reader.Read())
                 {
                     list.Add((String)reader[0]);
+                }
+                reader.Close();
+                //Connection_Deconnection.deconnect();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Erreur lors de la récupération des données " + e.Message);
+                Connection_Deconnection.deconnect();
+            }
+        }
+        private void remplirListOfCasse()
+        {
+            try
+            {
+                listOfCasse = new List<string>();
+                //requête sql
+                String query = "SELECT nomProduits" +
+                    " FROM Casses";
+
+                // lire l'enrégistrement
+                OleDbCommand sql = new OleDbCommand();
+                sql.CommandText = query;
+                sql.Connection = Connection_Deconnection.connection;
+                sql.CommandType = System.Data.CommandType.Text;
+
+                //le reader curseur
+                OleDbDataReader reader = sql.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    listOfCasse.Add((String)reader[0]);
                 }
                 reader.Close();
                 //Connection_Deconnection.deconnect();
@@ -128,7 +173,7 @@ namespace Gestion
 
                 if (casse != 0)
                 {
-                    MessageBox.Show("casse : " + cbNomProduit.Text);
+                   // MessageBox.Show("casse : " + cbNomProduit.Text);
                     insertValue(cbNomProduit.Text, dateProduit, prixProduit, casse);
                 }
                 else
@@ -139,6 +184,52 @@ namespace Gestion
             else
             {
                 MessageBox.Show("Veuillez remplir tous les champs svp :");
+            }
+        }
+
+        private void cbDelete_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbDelete.Checked == true)
+            {
+                cbCasse.Visible = true;
+                btSupprimer.Visible = true;
+            }
+            else
+            {
+                cbCasse.Visible = false;
+                btSupprimer.Visible = false;
+            }
+        }
+        private void deleteClient(string nomProduits)
+        {
+            try
+            {
+                String query = String.Format("DELETE * FROM Casses WHERE nomProduits = " + "'" + nomProduits + "'");
+                //MessageBox.Show(query);
+                OleDbCommand sql = new OleDbCommand(query, Connection_Deconnection.connection);
+                int rows = sql.ExecuteNonQuery();
+                if (rows >= 1)
+                {
+                    MessageBox.Show("Casse supprimée avec succès ");
+                }
+                else
+                {
+                    MessageBox.Show("Erreur lors de la suppression ");
+                }
+
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
+        }
+
+        private void btSupprimer_Click(object sender, EventArgs e)
+        {
+            string getValue = cbCasse.Text;
+            if (!getValue.Equals(""))
+            {
+                deleteClient(getValue);
             }
         }
     }
