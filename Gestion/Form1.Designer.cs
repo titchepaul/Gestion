@@ -31,6 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.bRestant = new System.Windows.Forms.Button();
             this.btAffichageVentes = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -47,6 +48,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Honeydew;
+            this.panel1.Controls.Add(this.bRestant);
             this.panel1.Controls.Add(this.btAffichageVentes);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.dataGridView1);
@@ -54,6 +56,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(890, 349);
             this.panel1.TabIndex = 0;
+            // 
+            // bRestant
+            // 
+            this.bRestant.Location = new System.Drawing.Point(696, 210);
+            this.bRestant.Name = "bRestant";
+            this.bRestant.Size = new System.Drawing.Size(124, 56);
+            this.bRestant.TabIndex = 3;
+            this.bRestant.Text = "RESTANT(S)";
+            this.bRestant.UseVisualStyleBackColor = true;
+            this.bRestant.Click += new System.EventHandler(this.bRestant_Click);
             // 
             // btAffichageVentes
             // 
@@ -184,6 +196,7 @@
         private System.Windows.Forms.Button btClients;
         private System.Windows.Forms.Button btListeClient;
         private System.Windows.Forms.Button btCasse;
+        private System.Windows.Forms.Button bRestant;
     }
 }
 

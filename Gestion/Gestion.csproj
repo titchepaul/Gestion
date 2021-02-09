@@ -102,6 +102,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Restant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Restant.Designer.cs">
+      <DependentUpon>Restant.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +142,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Restant.resx">
+      <DependentUpon>Restant.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventes.resx">
       <DependentUpon>Ventes.cs</DependentUpon>

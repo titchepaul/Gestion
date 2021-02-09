@@ -190,5 +190,11 @@ namespace Gestion
             Casse casse = new Casse();
             casse.ShowDialog();
         }
+
+        private void bRestant_Click(object sender, EventArgs e)
+        {
+            Restant rest = new Restant();
+            rest.ShowDialog();
+        }
     }
 }
