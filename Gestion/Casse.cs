@@ -232,5 +232,11 @@ namespace Gestion
                 deleteClient(getValue);
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ListeDesCasses listeDesCasses = new ListeDesCasses();
+            listeDesCasses.ShowDialog();
+        }
     }
 }

@@ -41,6 +41,7 @@
             this.cbDelete = new System.Windows.Forms.CheckBox();
             this.cbCasse = new System.Windows.Forms.ComboBox();
             this.btSupprimer = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nbreCasse)).BeginInit();
             this.SuspendLayout();
             // 
@@ -121,9 +122,9 @@
             // 
             // btSave
             // 
-            this.btSave.Location = new System.Drawing.Point(200, 328);
+            this.btSave.Location = new System.Drawing.Point(195, 318);
             this.btSave.Name = "btSave";
-            this.btSave.Size = new System.Drawing.Size(120, 41);
+            this.btSave.Size = new System.Drawing.Size(125, 51);
             this.btSave.TabIndex = 9;
             this.btSave.Text = "Enrégistrer";
             this.btSave.UseVisualStyleBackColor = true;
@@ -158,6 +159,16 @@
             this.btSupprimer.UseVisualStyleBackColor = true;
             this.btSupprimer.Click += new System.EventHandler(this.btSupprimer_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(588, 344);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(165, 52);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "LISTE DES ARTICLES CASSÉ(S)";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Casse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -165,6 +176,7 @@
             this.BackgroundImage = global::Gestion.Properties.Resources.aloe_vera;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btSupprimer);
             this.Controls.Add(this.cbCasse);
             this.Controls.Add(this.cbDelete);
@@ -202,5 +214,6 @@
         private System.Windows.Forms.CheckBox cbDelete;
         private System.Windows.Forms.ComboBox cbCasse;
         private System.Windows.Forms.Button btSupprimer;
+        private System.Windows.Forms.Button button1;
     }
 }
